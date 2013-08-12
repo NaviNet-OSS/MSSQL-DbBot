@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20130722 10:11:23.580" generator="Robot 2.8.1 (Python 2.7.5 on win32)">
+<suite source="C:\GitHome\TestAssetSourceControlManagement\devpoc\dbbot_testdata\check_file_exists2.txt" id="s1" name="Check File Exists2">
+<test id="s1-t1" name="Check that File1 exists">
+<kw type="kw" name="OperatingSystem.File Should Exist">
+<doc>Fails unless the given `path` points to an existing file.</doc>
+<arguments>
+<arg>c:/example/file1.txt</arg>
+</arguments>
+<msg timestamp="20130722 10:11:23.632" html="yes" level="INFO">File '&lt;a href="file://c:\example\file1.txt"&gt;c:\example\file1.txt&lt;/a&gt;' exists</msg>
+<status status="PASS" endtime="20130722 10:11:23.632" starttime="20130722 10:11:23.631"></status>
+</kw>
+<doc>Check that file 1 exists...</doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20130722 10:11:23.632" critical="yes" starttime="20130722 10:11:23.630"></status>
+</test>
+<test id="s1-t2" name="Check that File3 exists">
+<kw type="kw" name="OperatingSystem.File Should Exist">
+<doc>Fails unless the given `path` points to an existing file.</doc>
+<arguments>
+<arg>c:/example/file3.txt</arg>
+</arguments>
+<msg timestamp="20130722 10:11:23.637" level="FAIL">Path 'c:\example\file3.txt' does not match any file</msg>
+<status status="FAIL" endtime="20130722 10:11:23.637" starttime="20130722 10:11:23.636"></status>
+</kw>
+<doc>Check that file 3 exists...</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20130722 10:11:23.637" critical="yes" starttime="20130722 10:11:23.635">Path 'c:\example\file3.txt' does not match any file</status>
+</test>
+<doc>Check that the files exist...</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20130722 10:11:23.641" starttime="20130722 10:11:23.581"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" pass="1" id="s1" name="Check File Exists2">Check File Exists2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

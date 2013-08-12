@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>$page_title</title>
+        <style type='text/css'>
+        body
+        {
+            background-color: lightgrey;
+        }   
+
+        div.content
+        {
+            box-shadow: 0px 0px 3px 1px gray;
+            background-color: white;
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        h1
+        {
+            font-family: verdana, sans-serif;
+            font-size: 28pt;
+            margin-top: 0px;
+            margin-bottom: 25px;
+            font-weight: normal;
+        }
+
+        h1.pageTitle
+        {
+            margin-left: 40px;
+            font-size: 35pt;
+            margin-bottom: 0px;
+        }
+
+        section.timeStamp
+        {
+            margin-left: 50px;
+            font-family: arial, sans-serif;
+            font-weight: bold;
+            font-size: 13pt;
+            margin-bottom: 25px;
+        }
+
+        table, td, th
+        {
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-family: arial, sans-serif;
+        }
+
+        table
+        {
+            width: 98%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 25px;
+        }
+        
+        td, th
+        {
+            padding: 5px;
+        }
+
+        th
+        {
+            background-color: black;
+            color: white;
+        }
+
+        td.name
+        {
+            font-weight: bold;
+        }
+
+        </style>
+    </head>
+    <body>
+
+        <h1 class='pageTitle'>$page_title</h1>
+        <section class='timeStamp'>
+        $time_stamp
+        </section>
+
+        <div class='content'>
+            <h1>Failed Suites</h1>
+            $most_failed_suites
+            <h1>Failed Tests</h1>
+            $most_failed_tests
+            <h1>Failed Keywords</h1>
+            $most_failed_keywords
+        </div>
+    </body>
+</html>

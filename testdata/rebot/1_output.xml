@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20130722 10:10:59.669" generator="Robot 2.8.1 (Python 2.7.5 on win32)">
+<suite source="C:\GitHome\TestAssetSourceControlManagement\devpoc\dbbot_testdata\check_file_exists.txt" id="s1" name="Check File Exists">
+<test id="s1-t1" name="Check that File1 exists">
+<kw type="kw" name="OperatingSystem.File Should Exist">
+<doc>Fails unless the given `path` points to an existing file.</doc>
+<arguments>
+<arg>c:/example/file1.txt</arg>
+</arguments>
+<msg timestamp="20130722 10:10:59.720" html="yes" level="INFO">File '&lt;a href="file://c:\example\file1.txt"&gt;c:\example\file1.txt&lt;/a&gt;' exists</msg>
+<status status="PASS" endtime="20130722 10:10:59.720" starttime="20130722 10:10:59.720"></status>
+</kw>
+<doc>Check that file 1 exists...</doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20130722 10:10:59.720" critical="yes" starttime="20130722 10:10:59.719"></status>
+</test>
+<test id="s1-t2" name="Check that File2 exists">
+<kw type="kw" name="OperatingSystem.File Should Exist">
+<doc>Fails unless the given `path` points to an existing file.</doc>
+<arguments>
+<arg>c:/example/file2.txt</arg>
+</arguments>
+<msg timestamp="20130722 10:10:59.725" level="FAIL">Path 'c:\example\file2.txt' does not match any file</msg>
+<status status="FAIL" endtime="20130722 10:10:59.725" starttime="20130722 10:10:59.724"></status>
+</kw>
+<doc>Check that file 2 exists...</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20130722 10:10:59.725" critical="yes" starttime="20130722 10:10:59.723">Path 'c:\example\file2.txt' does not match any file</status>
+</test>
+<doc>Check that the files exist...</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20130722 10:10:59.729" starttime="20130722 10:10:59.669"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" pass="1" id="s1" name="Check File Exists">Check File Exists</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

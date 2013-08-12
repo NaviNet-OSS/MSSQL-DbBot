@@ -1,15 +1,18 @@
+# This class carries out the main parsing between an XML file and the database and manages related functions
+
 from datetime import datetime
 from robot.api import ExecutionResult
-from sqlite3 import IntegrityError
+from pymssql import IntegrityError
 
 from dbbot import Logger
 
 
 class RobotResultsParser(object):
 
-    def __init__(self, include_keywords, db, verbose_stream):
+    def __init__(self, include_keywords, log_messages, db, verbose_stream):
         self._verbose = Logger('Parser', verbose_stream)
         self._include_keywords = include_keywords
+        self._log_messages = log_messages
         self._db = db
 
     def xml_to_db(self, xml_file):
@@ -146,14 +149,14 @@ class RobotResultsParser(object):
     def _parse_keyword(self, keyword, test_run_id, suite_id, test_id, keyword_id):
         try:
             keyword_id = self._db.insert('keywords', {
-                'suite_id': suite_id,
-                'test_id': test_id,
-                'keyword_id': keyword_id,
-                'name': keyword.name,
-                'type': keyword.type,
-                'timeout': keyword.timeout,
-                'doc': keyword.doc
-            })
+              'suite_id': suite_id,
+              'test_id': test_id,
+              'keyword_id': keyword_id,
+              'name': keyword.name,
+              'type': keyword.type,
+              'timeout': keyword.timeout,
+              'doc': keyword.doc
+             })
         except IntegrityError:
             keyword_id = self._db.fetch_id('keywords', {
                 'name': keyword.name,
@@ -173,10 +176,12 @@ class RobotResultsParser(object):
         })
 
     def _parse_messages(self, messages, keyword_id):
-        self._db.insert_many_or_ignore('messages', ('keyword_id', 'level', 'timestamp', 'content'),
-            [(keyword_id, message.level, self._format_robot_timestamp(message.timestamp),
-            message.message) for message in messages]
-        )
+        if self._log_messages:
+            self._db.insert_many_or_ignore('messages', ('keyword_id', 'level', 'timestamp', 'content'),
+                [(keyword_id, message.level, self._format_robot_timestamp(message.timestamp),
+                unicode(message.message)[:320]) for message in messages]
+            )
+    
 
     def _parse_arguments(self, args, keyword_id):
         self._db.insert_many_or_ignore('arguments', ('keyword_id', 'content'),

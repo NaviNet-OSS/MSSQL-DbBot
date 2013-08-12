@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20130722 10:45:10.253" generator="Robot 2.8.1 (Python 2.7.5 on win32)">
+<suite source="C:\GitHome\TestAssetSourceControlManagement\devpoc\dbbot_testdata\illegal_chars.txt" id="s1" name="Illegal Chars">
+<test id="s1-t1" name="SQL Injection -- ' or 1=1--">
+<kw type="kw" name="BuiltIn.Set Tags">
+<doc>Adds given `tags` for the current test or all tests in a suite.</doc>
+<arguments>
+<arg>test' or 1=1--</arg>
+</arguments>
+<msg timestamp="20130722 10:45:10.316" level="INFO">Set tag 'test' or 1=1--'.</msg>
+<status status="PASS" endtime="20130722 10:45:10.316" starttime="20130722 10:45:10.316"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>check that file 1 exists... ' or 1=1--</arg>
+</arguments>
+<msg timestamp="20130722 10:45:10.316" level="INFO">check that file 1 exists... ' or 1=1--</msg>
+<status status="PASS" endtime="20130722 10:45:10.316" starttime="20130722 10:45:10.316"></status>
+</kw>
+<doc>check that file 1 exists... ' or 1=1--</doc>
+<tags>
+<tag>test' or 1=1--</tag>
+</tags>
+<status status="PASS" endtime="20130722 10:45:10.316" critical="yes" starttime="20130722 10:45:10.316"></status>
+</test>
+<test id="s1-t2" name="SQL Injection -- &quot; or 1=1--">
+<kw type="kw" name="BuiltIn.Set Tags">
+<doc>Adds given `tags` for the current test or all tests in a suite.</doc>
+<arguments>
+<arg>test" or 1=1--</arg>
+</arguments>
+<msg timestamp="20130722 10:45:10.316" level="INFO">Set tag 'test" or 1=1--'.</msg>
+<status status="PASS" endtime="20130722 10:45:10.316" starttime="20130722 10:45:10.316"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>check that file 1 exists... " or 1=1--</arg>
+</arguments>
+<msg timestamp="20130722 10:45:10.316" level="INFO">check that file 1 exists... " or 1=1--</msg>
+<status status="PASS" endtime="20130722 10:45:10.316" starttime="20130722 10:45:10.316"></status>
+</kw>
+<doc>check that file 1 exists... " or 1=1--</doc>
+<tags>
+<tag>test" or 1=1--</tag>
+</tags>
+<status status="PASS" endtime="20130722 10:45:10.316" critical="yes" starttime="20130722 10:45:10.316"></status>
+</test>
+<doc>Check that the files exist...</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20130722 10:45:10.316" starttime="20130722 10:45:10.253"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">test" or 1=1--</stat>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">test' or 1=1--</stat>
+</tag>
+<suite>
+<stat fail="0" pass="2" id="s1" name="Illegal Chars">Illegal Chars</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20130722 10:45:10.237" level="ERROR">Error in file 'C:\GitHome\TestAssetSourceControlManagement\devpoc\dbbot_testdata\illegal_chars.txt': Invalid syntax in test case 'SQL Injection -- ' or 1=1--': Non-existing setting 'Arguments'.</msg>
+<msg timestamp="20130722 10:45:10.253" level="ERROR">Error in file 'C:\GitHome\TestAssetSourceControlManagement\devpoc\dbbot_testdata\illegal_chars.txt': Invalid syntax in test case 'SQL Injection -- " or 1=1--': Non-existing setting 'Arguments'.</msg>
+</errors>
+</robot>

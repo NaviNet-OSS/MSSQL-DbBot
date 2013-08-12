@@ -1,3 +1,5 @@
+# This class defines generic command line options
+
 from optparse import OptionParser
 
 
@@ -10,10 +12,6 @@ class CommandLineOptions(object):
         self._options = self._get_validated_options()
 
     @property
-    def db_file_path(self):
-        return self._options.db_file_path
-
-    @property
     def be_verbose(self):
         return self._options.be_verbose
 
@@ -22,11 +20,6 @@ class CommandLineOptions(object):
             action='store_true',
             dest='be_verbose',
             help='be verbose about the operation'
-        )
-        self._parser.add_option('-b', '--database',
-            dest='db_file_path',
-            default=self.default_db_name,
-            help='path to the SQLite database for test run results'
         )
 
     def _get_validated_options(self):

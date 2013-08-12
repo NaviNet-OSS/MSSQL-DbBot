@@ -1,3 +1,5 @@
+# This class defines the command line options specific to the reader
+
 from os.path import exists
 from sys import argv
 
@@ -18,6 +20,14 @@ class ReaderOptions(CommandLineOptions):
     def include_keywords(self):
         return self._options.include_keywords
 
+    @property
+    def clear_database(self):
+        return self._options.clear_database
+
+    @property
+    def log_messages(self):
+        return self._options.log_messages
+
     def _add_parser_options(self):
         super(ReaderOptions, self)._add_parser_options()
         def files_args_parser(option, opt_str, _, parser):
@@ -34,12 +44,22 @@ class ReaderOptions(CommandLineOptions):
         self._parser.add_option('-d', '--dry-run',
             action='store_true',
             dest='dry_run',
-            help='do everything except store results into disk'
+            help='do everything except commit to database'
         )
         self._parser.add_option('-k', '--also-keywords',
             action='store_true',
             dest='include_keywords',
             help='parse also suites\' and tests\' keywords'
+        )
+        self._parser.add_option('-c', '--clear-database',
+            action='store_true',
+            dest='clear_database',
+            help='clear database of existing data before proceeding'
+        )
+        self._parser.add_option('-m', '--log-messages',
+            action='store_true',
+            dest='log_messages',
+            help='store log messages: requires --also-keywords to be run as well'
         )
         self._parser.add_option('-f', '--files',
             action='callback',
