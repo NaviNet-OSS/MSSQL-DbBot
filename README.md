@@ -15,4 +15,4 @@ Robot Framework version 2.7.4 or later is recommended as versions prior to 2.7.4
 Further information
 ------------
 
-(https://github.com/NaviNet/MSSQL-DbBot/wiki)
+https://github.com/NaviNet/MSSQL-DbBot/wiki
