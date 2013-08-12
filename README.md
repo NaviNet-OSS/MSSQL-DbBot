@@ -16,3 +16,10 @@ Further information
 ------------
 
 https://github.com/NaviNet/MSSQL-DbBot/wiki
+
+
+License
+-------
+DbBot is released under the [Apache License, Version 2.0](http://www.tldrlegal.com/license/apache-license-2.0).
+
+See LICENSE.TXT for details.
