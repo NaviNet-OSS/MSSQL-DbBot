@@ -11,7 +11,7 @@ Library                         OperatingSystem
 *** Variables ***
 
 
-${path_to_dbbot}                C:\\GitHome\\TestAssetSourceControlManagement\\mssql_dbbot
+${path_to_dbbot}                C:\\GitHome\\mssql-dbbot
 ${path_to_dbbot_testdata}       ${path_to_dbbot}\\testdata
 
 

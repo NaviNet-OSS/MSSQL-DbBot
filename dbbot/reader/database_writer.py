@@ -49,9 +49,9 @@ class DatabaseWriter(RobotDatabase):
         self._create_table('test_run_errors', {
             'test_run_id': 'INTEGER NOT NULL REFERENCES test_runs',
             'level': 'varchar(320) NOT NULL',
-            'timestamp': 'DATETIME NOT NULL',
+            'timestamp': 'varchar(320) NOT NULL',
             'content': 'varchar(320) NOT NULL'
-        }, ('test_run_id', 'level', 'content'))
+        }, ('test_run_id', 'level', 'content', 'timestamp'))
 
     def _create_table_tag_status(self):
         self._create_table('tag_status', {
