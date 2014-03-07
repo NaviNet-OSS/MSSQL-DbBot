@@ -24,7 +24,7 @@ setup(
     author           = 'aaronhutton',
     author_email     = 'ahutton@navinet.net',
     url              = 'https://github.com/NaviNet/MSSQL-DbBot',
-    download_url     = 'https://github.com/NaviNet/MSSQL-DbBot/tarball/'VERSION,
+    download_url     = 'https://github.com/NaviNet/MSSQL-DbBot/tarball/1.2',
     license          = 'Apache License 2.0',
     description      = 'A tool for serializing Robot Framework test run '
                        'results into an sqlite3 database.',
