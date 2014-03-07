@@ -10,9 +10,8 @@ Library                         OperatingSystem
 
 *** Variables ***
 
-
-${path_to_dbbot}                C:\\GitHome\\mssql-dbbot
-${path_to_dbbot_testdata}       ${path_to_dbbot}\\testdata
+${path_to_dbbot}                C:\\GitHome\\MSSQL-dbbot
+${path_to_dbbot_testdata}       ${path_to_dbbot}\\atests\\testdata
 
 
 *** Test Cases ***
