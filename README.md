@@ -1,7 +1,7 @@
 MSSQL DbBot
 =====
 
-This is a forked version of DbBot, which is a Python script to serialize Robot Framework produced test run results, i.e. output.xml files, into a database. This version serializes the results into a Microsoft® SQL Server database to provide the future Robot Framework related tools and plugins with a unified storage for the test run results.
+This is a forked version of DbBot, which is a Python script to serialize Robot Framework produced test run results, i.e. output.xml files, into a database. This version serializes the results into a Microsoft SQL Server database to provide the future Robot Framework related tools and plugins with a unified storage for the test run results.
 
 
 Requirements
@@ -20,6 +20,6 @@ Further information
 
 License
 -------
-MSSQL-DbBot is released under the [MIT License](http://www.tldrlegal.com/license/mit-license).
+MSSQL-DbBot is released under the [Apache 2.0 Licence]( http://www.apache.org/licenses/LICENSE-2.0).
 
 See LICENSE.TXT for details.
